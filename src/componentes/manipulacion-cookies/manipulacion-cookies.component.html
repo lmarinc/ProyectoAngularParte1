@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <h2>Manipulación de Cookies</h2>
+
+  <div *ngIf="saludo">
+    <div class="alert alert-success">
+      {{ saludo }}
+    </div>
+
+    <button class="btn btn-danger mt-3" (click)="borrarCookie('nombreUsuario')">Borrar Cookie</button>
+  </div>
+
+  <!-- Si no hay cookie guardada, mostrar el formulario -->
+  <div *ngIf="!saludo" class="form-group">
+    <label for="nombreUsuario">Por favor, ingresa tu nombre:</label>
+    <input type="text" id="nombreUsuario" class="form-control" [(ngModel)]="nombreUsuario" placeholder="Ingresa tu nombre">
+
+    <button class="btn btn-primary mt-3" (click)="guardarNombre()">Guardar Nombre</button>
+  </div>
+</div>

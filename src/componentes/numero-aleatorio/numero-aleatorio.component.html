@@ -1,0 +1,34 @@
+<div class="container w-50 mt-4 mx-auto">
+  <div class="card text-center">
+    <div class="card-header bg-primary text-white">
+      <h4>Generador de Números Aleatorios</h4>
+    </div>
+    <div class="card-body">
+      <div class="mb-3">
+        <label for="cantidadNumeros" class="form-label">Cantidad de números a generar:</label>
+        <input
+          type="number"
+          class="form-control w-75 mx-auto"
+        id="cantidadNumeros"
+        [(ngModel)]="cantidadNumeros"
+        min="1"
+        max="100"
+        placeholder="Ingresa un número"
+        />
+      </div>
+
+      <button class="btn btn-success" (click)="generarNumerosAleatorios()">Generar Números</button>
+
+      <hr />
+
+      <div *ngIf="numerosAleatorios.length > 0">
+        <h5 class="card-title">Números Generados:</h5>
+        <ul class="list-group w-75 mx-auto">
+          <li class="list-group-item" *ngFor="let numero of numerosAleatorios">
+            {{ numero }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

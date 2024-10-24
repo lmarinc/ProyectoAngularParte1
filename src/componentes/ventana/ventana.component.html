@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <h3>Interacción con la Ventana</h3>
+
+  <button class="btn btn-primary" (click)="abrirVentana()">Abrir Ventana</button>
+
+  <div class="mt-4">
+    <h5>Redimensionar Ventana</h5>
+    <button class="btn btn-secondary me-2" (click)="redimensionarVentana(600, 400)">600x400</button>
+    <button class="btn btn-secondary me-2" (click)="redimensionarVentana(800, 600)">800x600</button>
+    <button class="btn btn-secondary" (click)="redimensionarVentana(1024, 768)">1024x768</button>
+  </div>
+
+  <div class="mt-4">
+    <h5>Resolución de la Ventana</h5>
+    <p>Ancho: {{ ancho }} px</p>
+    <p>Alto: {{ alto }} px</p>
+  </div>
+</div>
